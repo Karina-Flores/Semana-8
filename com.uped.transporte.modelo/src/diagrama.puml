@@ -1,0 +1,28 @@
+@startuml
+
+abstract class Vehiculo {
+  - marca : String
+  - modelo : String
+  + mostrarInfo() : void
+  + calcularCostoMantenimiento() : double
+}
+
+class Automovil {
+  - numPuertas : int
+  + calcularCostoMantenimiento() : double
+}
+
+class Motocicleta {
+  - cilindrada : int
+  + calcularCostoMantenimiento() : double
+}
+class CamionDeCarga {
+  - capacidadToneladas : double
+  + calcularCostoMantenimiento() : double
+}
+
+Vehiculo <|-- Automovil
+Vehiculo <|-- Motocicleta
+Vehiculo <|-- CamionDeCarga
+
+@enduml
